@@ -1,0 +1,223 @@
+/* 乐园独立样式：固定视角 3D 场景与本机摆设。 */
+.park-mode .topbar { display: none; }
+.view.view-playground { width: min(1600px, 100%); padding: 24px 3% 32px; }
+.park-world { overflow: hidden; border: 1px solid #e9e6db; border-radius: 24px; background: #fffcf6; box-shadow: 0 16px 48px #4e624509; }
+.park-header { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 28px 34px 10px; }
+.park-kicker { margin: 0 0 6px; color: #8a927e; font-size: 11px; letter-spacing: .12em; }
+.park-header h1 { margin: 0; font-family: "Songti SC", "Noto Serif SC", Georgia, serif; font-size: clamp(26px, 3vw, 38px); letter-spacing: .08em; font-weight: 650; }
+.park-leaf { display: inline-block; margin-left: 10px; color: #8ca37b; font-size: 30px; transform: rotate(-25deg); }
+.park-wallet { display: flex; align-items: center; gap: 10px; padding: 10px 18px 10px 10px; border: 1px solid #e7dbb9; border-radius: 30px; background: #fff9e7; white-space: nowrap; box-shadow: 0 3px 0 #e8dfc433; color: #786039; font-size: 13px; }
+.park-wallet strong { padding-left: 5px; font-size: 24px; font-variant-numeric: tabular-nums; }
+.park-wallet small { display: block; margin-top: 1px; color: #9b9279; font-size: 9px; letter-spacing: .08em; }
+.park-coin { display: grid; width: 36px; height: 36px; place-items: center; border: 3px double #d8b774; border-radius: 50%; background: #f3dc9c; color: #9c772e; font-size: 23px; }
+.park-scene-status { display: flex; min-height: 50px; align-items: center; justify-content: space-between; gap: 12px; padding: 0 34px; color: #939887; font-size: 11px; }
+.park-scene-status > span { display: flex; align-items: center; gap: 8px; }
+.park-scene-status .status-dot { flex-shrink: 0; }
+.park-checkin { min-height: 36px; border: 1px solid #dfe7d6; border-radius: 22px; padding: 0 14px; background: #eef3e7; color: #617c4e; cursor: pointer; white-space: nowrap; font-size: 11px; }
+.park-checkin:disabled { color: #929a88; background: transparent; cursor: default; }
+.park-stage { position: relative; width: min(100%, 1320px); margin: 0 auto; aspect-ratio: 1584 / 992; isolation: isolate; }
+.park-island { display: block; width: 100%; height: 100%; object-fit: contain; }
+.park-shop-sign { position: absolute; top: 35%; left: 70%; transform: translateX(-50%); min-height: 34px; padding: 5px 13px; border: 1px solid #fffdf0; border-radius: 18px; background: #fffff3e8; box-shadow: 0 4px 14px #4d532f1c; color: #536345; font-size: clamp(10px, 1vw, 12px); cursor: pointer; white-space: nowrap; }
+.park-shop-sign:hover { background: #fff; }
+.park-shop-sign span { padding-left: 4px; }
+.park-dock { position: relative; z-index: 1; display: flex; width: fit-content; max-width: calc(100% - 24px); gap: 7px; margin: -18px auto 0; padding: 7px; border: 1px solid #e5dfcd; border-radius: 22px; background: #fffefa; box-shadow: 0 8px 24px #656d4614, 0 3px 0 #e8e3d5; }
+.park-dock-button { display: flex; min-height: 48px; min-width: 110px; justify-content: center; align-items: center; gap: 9px; padding: 6px 20px; border: 0; border-radius: 15px; background: transparent; color: #6c755e; cursor: pointer; font-size: 14px; font-weight: 600; }
+.park-dock-button > span { font-size: 23px; font-weight: 400; }
+.park-dock-button small { display: grid; min-width: 18px; height: 18px; place-items: center; border-radius: 50%; background: #e5ecdf; font-size: 10px; }
+.park-dock-button:hover { background: #eff3e9; }
+.park-dock-button.is-active { background: #607953; color: #fff; box-shadow: 0 4px 8px #6474511a; }
+.park-dock-button.is-active small { background: #ffffff33; }
+.park-caption { margin: 18px 12px 22px; text-align: center; color: #9b9e8e; font-size: 11px; letter-spacing: .06em; }
+.park-panel-content { border-top: 1px solid #e7e6da; padding: 26px 30px 20px; background: #f8f8f0; }
+.park-panel-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 20px; }
+.park-panel-heading h2 { margin: 0; font-size: 21px; font-weight: 600; }
+.park-item-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+.park-item { min-width: 0; padding: 10px 14px 15px; border: 1px solid #e5e7db; border-radius: 16px; background: #fffefa; }
+.park-item.is-selected { border-color: #8da77c; box-shadow: 0 0 0 2px #dce8d2; }
+.park-item-art { position: relative; margin: 0 -4px 7px; border-radius: 12px; background: #f4f3e9; }
+.park-prop { display: block; width: 100%; aspect-ratio: 3 / 2; background-image: url('../assets/park/park-props-v1.png'); background-size: 200% 200%; background-repeat: no-repeat; }
+.prop-eucalyptus-swing { background-position: left top; }
+.prop-story-tent { background-position: right top; }
+.prop-forest-tea-set { background-position: left bottom; }
+.prop-little-train { background-position: right bottom; }
+.park-item-badge { position: absolute; bottom: 5px; right: 5px; border-radius: 7px; padding: 3px 6px; background: #fffdf1df; color: #768767; font-size: 9px; }
+.park-item h3 { margin: 0 0 7px; font-size: 13px; }
+.park-item p { min-height: 30px; margin: 0; color: #929989; font-size: 10px; line-height: 1.6; }
+.park-item-actions { display: flex; flex-wrap: wrap; gap: 7px; justify-content: space-between; align-items: center; margin-top: 12px; }
+.park-item-actions .button { min-height: 34px; padding: 0 11px; font-size: 11px; }
+.park-item-actions .text-button { font-size: 10px; }
+.park-price { color: #a38b53; font-size: 13px; font-weight: 600; }
+.park-note { margin: 18px 0 0; color: #909984; font-size: 11px; line-height: 1.7; }
+.park-spot { position: absolute; width: 12%; aspect-ratio: 3 / 2; transform: translate(-50%, -80%); }
+.spot-lawn-west { left: 35%; top: 61%; }
+.spot-lawn-east { left: 60%; top: 60%; }
+.spot-lawn-front-left { left: 43%; top: 72%; }
+.spot-lawn-front-right { left: 58%; top: 73%; }
+.park-placed-toy { display: block; width: 100%; padding: 0; border: 0; background: transparent; cursor: pointer; filter: drop-shadow(0 4px 3px #414a2c20); }
+.park-placed-toy:hover { transform: translateY(-3px); }
+.park-drop-point { position: absolute; bottom: -12px; left: 50%; display: flex; min-width: 44px; min-height: 44px; align-items: center; justify-content: center; transform: translateX(-50%); border: 2px dashed #faffeb; border-radius: 50%; padding: 0 6px; color: #fffef1; background: #577147bd; box-shadow: 0 2px 10px #42543922; cursor: pointer; font-size: 11px; }
+.park-drop-point > span { font-size: 23px; }
+.park-drop-point small { position: absolute; top: 100%; left: 50%; transform: translateX(-50%); padding: 2px 4px; border-radius: 4px; background: #f8faefd9; color: #526541; font-size: 9px; white-space: nowrap; }
+.park-drop-point:disabled { cursor: default; opacity: .75; }
+.park-drop-point.is-occupied { background: #817b66cc; }
+.park-empty-bag { padding: 28px 10px; text-align: center; }
+.park-empty-bag > span { display: inline-grid; width: 60px; height: 60px; place-items: center; border-radius: 20px; background: #ecf0e5; color: #7f9672; font-size: 36px; }
+.park-empty-bag h3 { margin: 15px 0 8px; font-size: 16px; }
+.park-empty-bag p { margin: 0 0 18px; font-size: 12px; color: #949b87; }
+.park-journal { margin-top: 18px; border: 1px solid #e7e6dc; border-radius: 16px; background: #fdfcf7; }
+.park-journal summary { display: flex; justify-content: space-between; gap: 16px; padding: 19px 24px; cursor: pointer; font-size: 13px; list-style: none; }
+.park-journal summary::-webkit-details-marker { display: none; }
+.park-journal summary > span:last-child { font-size: 11px; color: #919a86; }
+.park-journal-content { padding: 0 24px 24px; }
+.park-journal-content .park-note { margin: 0 0 18px; }
+.park-journal-content h2 { margin: 25px 0 14px; font-size: 16px; }
+.park-footnote { text-align: center; color: #989e90; font-size: 10px; line-height: 1.8; }
+@media (min-width: 1200px) {
+  .park-stage { max-width: min(100%, calc((100svh - 290px) * 1.59677)); }
+}
+@media (max-width: 1050px) {
+  .park-header { padding: 24px 22px 8px; }
+  .park-scene-status { padding: 0 22px; }
+  .park-item-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 760px) {
+  .view.view-playground { padding: 14px 12px 24px; }
+  .park-world { border-radius: 20px; }
+  .park-header { gap: 8px; padding: 23px 18px 9px; }
+  .park-header h1 { font-size: 27px; }
+  .park-kicker { font-size: 9px; letter-spacing: .04em; }
+  .park-leaf { display: none; }
+  .park-wallet { gap: 6px; padding: 7px 12px 7px 7px; font-size: 11px; }
+  .park-wallet strong { font-size: 21px; }
+  .park-coin { width: 30px; height: 30px; font-size: 20px; }
+  .park-scene-status { padding: 0 18px; font-size: 9px; }
+  .park-checkin { padding: 0 9px; font-size: 10px; }
+  .park-shop-sign { min-height: 29px; padding: 4px 8px; font-size: 9px; }
+  .park-dock { gap: 3px; margin-top: 5px; padding: 5px; border-radius: 18px; }
+  .park-dock-button { min-width: 83px; min-height: 48px; padding: 5px 12px; gap: 7px; font-size: 13px; }
+  .park-dock-button > span { font-size: 22px; }
+  .park-caption { margin: 15px 8px 20px; font-size: 10px; }
+  .park-panel-content { padding: 22px 16px 18px; }
+  .park-item-grid { gap: 10px; }
+  .park-item { padding: 8px 10px 12px; }
+  .park-panel-heading h2 { font-size: 19px; }
+  .park-journal summary { padding: 17px 16px; }
+  .park-journal-content { padding: 0 16px 20px; }
+  .park-drop-point { min-width: 34px; min-height: 34px; bottom: -8px; font-size: 8px; }
+  .park-drop-point small { font-size: 8px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .park-world * { scroll-behavior: auto; transition: none; }
+}
+
+/* 实时三维场地：取消旧图片舞台的最大宽度限制。 */
+.park-mode .view-playground { width: 100%; padding: 14px 18px 28px; }
+.park-mode .park-world { border-radius: 20px; }
+.park-mode .park-header { padding: 20px 28px 5px; }
+.park-mode .park-header h1 { font-size: 30px; }
+.park-mode .park-scene-status { min-height: 38px; padding: 0 28px 8px; }
+.park-stage.park-stage-live { width: 100%; max-width: none; height: max(550px, calc(100svh - 214px)); max-height: 1100px; aspect-ratio: auto; background: #f5f4e9; overflow: hidden; }
+.park-canvas { display: block; width: 100%; height: 100%; touch-action: none; cursor: grab; }
+.park-canvas:active { cursor: grabbing; }
+.park-canvas:focus-visible { outline: 2px solid #8caa7b; outline-offset: -3px; }
+.park-3d-loading { position: absolute; top: 46%; left: 50%; transform: translate(-50%,-50%); max-width: 80%; padding: 16px 22px; border-radius: 14px; background: #fffdf4ef; color: #66795b; box-shadow: 0 8px 32px #404e3020; text-align: center; font-size: 13px; }
+.park-3d-loading[hidden] { display: none; }
+.park-3d-retry { display: none; position: absolute; left: 50%; top: 60%; transform: translateX(-50%); }
+.scene-failed .park-3d-retry { display: block; }
+.park-camera-tools { position: absolute; top: 16px; right: 18px; display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 6px; max-width: calc(100% - 32px); }
+.park-camera-tools button, .park-scene-bottom button { min-height: 36px; border: 1px solid #dce2d1; border-radius: 11px; padding: 0 12px; background: #fffdf5ed; color: #5d7252; box-shadow: 0 3px 8px #65734d0c; font-size: 11px; cursor: pointer; }
+.park-camera-tools button:hover, .park-scene-bottom button:hover { background: #e5eddb; }
+.park-scene-bottom { position: absolute; bottom: 16px; left: 20px; right: 20px; display: flex; justify-content: space-between; align-items: center; gap: 12px; pointer-events: none; }
+.park-live-status { border-radius: 20px; padding: 8px 13px; background: #fffdf3da; font-size: 11px; color: #758269; }
+.park-scene-bottom button { pointer-events: auto; white-space: nowrap; }
+.park-mode .park-dock { margin-top: 10px; }
+.park-mode .park-caption { margin: 13px 8px 16px; }
+.park-slot-choices { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+.park-expanded .sidebar { display: none; }
+.park-expanded .main-area { margin-left: 0; padding-bottom: 0; }
+.park-expanded .view-playground { padding: 0; }
+.park-expanded .park-world { border-radius: 0; border: 0; }
+.park-expanded .park-stage-live { height: max(600px, calc(100svh - 135px)); max-height: none; }
+@media (max-width: 760px) {
+  .park-mode .view-playground { padding: 8px 8px 20px; }
+  .park-mode .park-header { padding: 18px 16px 7px; }
+  .park-mode .park-header h1 { font-size: 26px; }
+  .park-mode .park-scene-status { padding: 0 16px 8px; }
+  .park-stage.park-stage-live { height: 550px; max-height: none; }
+  .park-camera-tools { top: 10px; right: 10px; gap: 4px; }
+  .park-camera-tools button { padding: 0 9px; font-size: 10px; }
+  .park-scene-bottom { left: 10px; right: 10px; bottom: 12px; gap: 7px; }
+  .park-live-status { font-size: 10px; padding: 7px 9px; }
+  .park-scene-bottom button { font-size: 10px; padding: 0 9px; }
+  .park-expanded .park-stage-live { height: calc(100svh - 135px); min-height: 500px; }
+}
+
+.park-camera-tools button[aria-pressed="true"] { background: #dce8cf; border-color: #a8bb96; }
+/* 把常用工具固定在场地内，进入乐园就能看到商店、背包和布置。 */
+.park-mode .park-world { display: grid; grid-template-columns: minmax(0, 1fr); }
+.park-mode .park-header { grid-row: 1; grid-column: 1; }
+.park-mode .park-scene-status { grid-row: 2; grid-column: 1; }
+.park-mode .park-stage-live { grid-row: 3; grid-column: 1; }
+.park-mode .park-dock { grid-row: 3; grid-column: 1; align-self: end; margin: 0 auto 12px; }
+.park-mode .park-caption { grid-row: 4; grid-column: 1; }
+.park-mode #parkPanel { grid-row: 5; grid-column: 1; }
+.park-scene-bottom { bottom: 84px; }
+.park-expanded .park-stage-live { height: max(460px, calc(100svh - 160px)); }
+
+.park-dock .park-dock-button { min-width: 84px; padding-inline: 15px; }
+.wardrobe-layout { display: grid; grid-template-columns: minmax(250px, .85fr) minmax(0, 1.5fr); gap: 28px; align-items: start; }
+.wardrobe-mirror { position: sticky; top: 18px; text-align: center; padding-bottom: 20px; }
+.wardrobe-preview { position: relative; height: clamp(340px, 38vw, 500px); overflow: hidden; border: 1px solid #dedbcc; border-radius: 120px 120px 24px 24px; background: #f2efe4; }
+.wardrobe-preview canvas { display: block; width: 100%; height: 100%; touch-action: none; }
+.wardrobe-preview canvas:focus-visible { outline: 3px solid #77926a; outline-offset: -4px; border-radius: inherit; }
+.wardrobe-preview-status { position: absolute; top: 40%; left: 10%; width: 80%; font-size: 13px; line-height: 1.8; pointer-events: none; }
+.wardrobe-preview-retry { position: absolute; top: 60%; left: 50%; transform: translateX(-50%); }
+.wardrobe-preview-status[hidden], .wardrobe-preview-retry[hidden] { display: none; }
+.wardrobe-preview-tools { position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%); display: flex; gap: 4px; white-space: nowrap; padding: 5px; border: 1px solid #dedbcd; border-radius: 30px; background: #fffdf5ee; }
+.wardrobe-preview-tools button { border: 0; border-radius: 20px; background: transparent; color: #52654c; padding: 9px 10px; font-size: 12px; cursor: pointer; }
+.wardrobe-preview-tools button:hover { background: #e7ecd9; }
+.wardrobe-look-label { margin: 20px 0 7px; color: #7e8b70; font-size: 11px; letter-spacing: 3px; }
+.wardrobe-look { margin: 0 auto 10px; max-width: 340px; color: #344b39; font-size: 14px; line-height: 1.8; }
+.wardrobe-mirror > small { color: #8a8c7e; font-size: 11px; line-height: 1.9; }
+.wardrobe-category + .wardrobe-category { margin-top: 26px; }
+.wardrobe-category-heading { display: flex; align-items: center; gap: 15px; margin-bottom: 12px; }
+.wardrobe-category-heading h3 { margin: 0; color: #344b39; font-size: 17px; }
+.wardrobe-category-heading > span { color: #8d9584; font-size: 11px; }
+.wardrobe-items { display: grid; gap: 9px; }
+.wardrobe-item { display: grid; grid-template-columns: 54px minmax(0, 1fr) auto; align-items: center; gap: 13px; padding: 13px; border: 1px solid #e3e5d7; border-radius: 15px; background: #fffdf7; }
+.wardrobe-item.is-equipped { border-color: #9bad8a; background: #f1f4e7; }
+.wardrobe-item:focus-visible { outline: 2px solid #77926a; outline-offset: 3px; }
+.wardrobe-swatch { display: grid; place-items: center; width: 52px; height: 58px; border-radius: 12px; background: color-mix(in srgb, var(--wearable-color) 20%, #fffdf4); color: var(--wearable-color); }
+[data-wardrobe-item="forest-original"] { --wearable-color: #7d9662; }
+[data-wardrobe-item="cream-vest"] { --wearable-color: #d4c198; }
+[data-wardrobe-item="peach-vest"] { --wearable-color: #da9690; }
+[data-wardrobe-item="sky-vest"] { --wearable-color: #8eafc6; }
+[data-wardrobe-item="no-headwear"] { --wearable-color: #b5b8b2; }
+[data-wardrobe-item="leaf-beret"] { --wearable-color: #718b61; }
+[data-wardrobe-item="flower-clip"] { --wearable-color: #d3af4a; }
+[data-wardrobe-item="natural"] { --wearable-color: #a2aaa0; }
+[data-wardrobe-item="peach-blush"] { --wearable-color: #e9979e; }
+[data-wardrobe-item="star-freckles"] { --wearable-color: #d5aa53; }
+[data-wardrobe-item="lavender-eyeshadow"] { --wearable-color: #aa90c5; }
+.wardrobe-swatch span { font-size: 31px; line-height: 1; }
+.swatch-outfit:not(.swatch-original) span { width: 32px; height: 34px; color: #fff8e6; background: var(--wearable-color); border-radius: 5px 5px 9px 9px; text-align: center; font-size: 22px; padding-top: 6px; clip-path: polygon(15% 0, 35% 0, 50% 23%, 65% 0, 85% 0, 100% 35%, 86% 45%, 86% 100%, 14% 100%, 14% 45%, 0 35%); }
+.wardrobe-item h4 { margin: 0 0 4px; color: #3a4d3b; font-size: 13px; font-weight: 600; }
+.wardrobe-item p { margin: 0 0 5px; font-size: 11px; color: #8a8f81; line-height: 1.7; }
+.wardrobe-item-copy small { color: #738363; font-size: 10px; }
+.wardrobe-item > .button { min-height: 36px; padding: 7px 11px; font-size: 11px; white-space: nowrap; }
+@media (max-width: 1000px) {
+  .wardrobe-layout { grid-template-columns: minmax(220px, .8fr) minmax(0, 1fr); gap: 18px; }
+  .wardrobe-item { grid-template-columns: 43px minmax(0, 1fr); gap: 10px; }
+  .wardrobe-swatch { width: 43px; }
+  .wardrobe-item > .button { grid-column: 2; justify-self: start; }
+}
+@media (max-width: 600px) {
+  .park-scene-bottom { bottom: 132px; }
+  .park-dock { flex-wrap: wrap; justify-content: center; }
+  .park-dock .park-dock-button { min-width: 76px; padding-inline: 10px; min-height: 42px; }
+  .wardrobe-layout { grid-template-columns: minmax(0, 1fr); }
+  .wardrobe-mirror { position: static; }
+  .wardrobe-preview { height: 390px; max-width: 350px; margin-inline: auto; }
+  .wardrobe-item { grid-template-columns: 48px minmax(0, 1fr) auto; }
+  .wardrobe-item > .button { grid-column: auto; }
+}

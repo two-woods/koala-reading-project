@@ -1,0 +1,107 @@
+.garden-panel { background: #f6f7ee; }
+.garden-intro { display: flex; align-items: center; gap: 17px; margin-bottom: 27px; padding: 19px 21px; border: 1px solid #dfe5d1; border-radius: 18px; background: #fffdf2; }
+.garden-intro > span:first-child { display: grid; place-items: center; flex: 0 0 52px; height: 52px; border-radius: 17px; background: #e9eddb; color: #84996b; font-size: 38px; }
+.garden-intro strong { color: #435c3e; font-size: 15px; }
+.garden-intro p { margin: 7px 0 0; color: #89917b; font-size: 11px; line-height: 1.8; }
+.garden-free { flex-shrink: 0; margin-left: auto; padding: 7px 11px; border-radius: 20px; background: #eef2e2; color: #7b8e60; font-size: 10px; white-space: nowrap; }
+.garden-layout { display: grid; grid-template-columns: minmax(250px, 1fr) minmax(290px, 1.2fr); align-items: start; gap: 27px; }
+.garden-section-heading { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 13px; }
+.garden-section-heading h3, .garden-section-heading h4 { margin: 0; color: #486342; font-size: 14px; font-weight: 600; }
+.garden-section-heading > span { color: #919b82; font-size: 10px; }
+.garden-bed-map { position: relative; height: 430px; overflow: hidden; border-radius: 26px 39px 29px 35px; background: radial-gradient(ellipse at 11% 22%, #dfe8cd 0, transparent 32%), radial-gradient(ellipse at 80% 65%, #dfe8d1 0, transparent 36%), #edf1e2; }
+.garden-map-path { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.garden-map-trail { fill: none; stroke: #e3ddca; stroke-width: 34px; stroke-linecap: round; opacity: .65; }
+.garden-map-stones { fill: none; stroke: #d3cab3; stroke-width: 23px; stroke-linecap: round; stroke-dasharray: 11 18; opacity: .75; }
+.garden-bed { position: absolute; display: flex; width: 40%; min-width: 0; height: 114px; flex-direction: column; align-items: center; justify-content: center; padding: 8px 5px; border: 0; border-radius: 41% 59% 55% 45% / 49% 38% 62% 51%; background: transparent; color: #7e8f6e; cursor: pointer; isolation: isolate; }
+.garden-bed::before { content: ""; position: absolute; z-index: -1; inset: 5px 0; border-radius: inherit; background: radial-gradient(ellipse at 35% 55%, #c9d8b8b0 0, #dae4cb65 52%, transparent 73%); }
+.garden-bed[data-bed-id="west-3"] { left: 8%; top: 9%; }
+.garden-bed[data-bed-id="east-3"] { right: 2%; top: 0; border-radius: 60% 40% 47% 53% / 45% 62% 38% 55%; }
+.garden-bed[data-bed-id="west-2"] { left: 0; top: 40%; width: 43%; border-radius: 48% 52% 34% 66% / 39% 54% 46% 61%; }
+.garden-bed[data-bed-id="east-2"] { right: 0; top: 29%; width: 41%; }
+.garden-bed[data-bed-id="west-1"] { left: 8%; top: 72%; border-radius: 57% 43% 65% 35% / 55% 42% 58% 45%; }
+.garden-bed[data-bed-id="east-1"] { right: 2%; top: 59%; border-radius: 36% 64% 42% 58% / 57% 45% 55% 43%; }
+.garden-bed strong { color: #617552; font-size: 10px; font-weight: 600; }
+.garden-bed small { color: #768969; font-size: 10px; line-height: 1.6; }
+.garden-bed-blooms { position: relative; display: block; width: 100%; max-width: 112px; height: 52px; margin: 2px 0; font-size: 24px; line-height: 1; }
+.garden-bed-blooms > span { position: absolute; }
+.garden-bed-blooms > span:nth-child(1) { left: 5%; top: 17px; font-size: 21px; transform: rotate(-16deg); }
+.garden-bed-blooms > span:nth-child(2) { left: 24%; top: 1px; font-size: 29px; transform: rotate(-4deg); }
+.garden-bed-blooms > span:nth-child(3) { left: 48%; top: 23px; font-size: 23px; transform: rotate(10deg); }
+.garden-bed-blooms > span:nth-child(4) { left: 69%; top: 8px; font-size: 22px; transform: rotate(14deg); }
+.garden-bed-blooms > span:nth-child(5) { left: 28%; top: 32px; font-size: 18px; transform: rotate(-9deg); }
+.garden-bed.is-empty .garden-bed-blooms { color: #93a77c; }
+.garden-bed.is-empty .garden-bed-blooms > span:first-child { left: calc(50% - 21px); top: 14px; font-size: 28px; }
+.garden-bed.is-empty .garden-bed-blooms > span:nth-child(2) { left: calc(50% + 5px); top: 19px; font-size: 17px; }
+.garden-bed.is-planted::before { background: radial-gradient(ellipse at 42% 55%, #bfd1a78c 0, #d8e3c878 50%, transparent 73%); }
+.garden-bed.is-wet::before { background: radial-gradient(ellipse at 42% 55%, #b8ceb896 0, #d2e0cf78 50%, transparent 73%); }
+.garden-bed.is-selected::before { background: #fffbedb5; box-shadow: 0 0 0 1px #8fa77780, 0 3px 10px #6e865313; }
+.garden-bed.is-selected strong { color: #435f37; }
+.garden-bed-check { position: absolute; top: 1px; right: 8px; display: grid; place-items: center; width: 18px; height: 18px; border-radius: 50%; background: #7d9569; color: #fffef5; font-size: 11px; visibility: hidden; }
+.garden-bed.is-selected .garden-bed-check { visibility: visible; }
+.garden-bed .garden-wet-dot { color: #5e8b7d; }
+.garden-map-entry { margin: 12px 0 0; text-align: center; color: #99a086; font-size: 10px; }
+.garden-map-entry > span { padding-right: 5px; color: #8b9f74; }
+.garden-care { min-width: 0; padding: 22px; border: 1px solid #e0e3cf; border-radius: 18px; background: #fffef7; }
+.garden-care-heading { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 17px; }
+.garden-eyebrow { margin: 0 0 7px; color: #a1a58d; font-size: 9px; letter-spacing: .08em; }
+.garden-care-heading h3 { margin: 0; color: #486140; font-size: 18px; font-weight: 550; }
+.garden-care-heading .text-button { flex-shrink: 0; min-height: 36px; color: #849573; font-size: 10px; }
+.garden-bed-status { display: flex; align-items: center; gap: 12px; padding: 12px 14px; margin-bottom: 23px; border-radius: 12px; background: #f3f2e8; }
+.garden-bed-status > span { font-size: 28px; color: #9aa981; }
+.garden-bed-status strong { display: block; color: #7b8369; font-size: 11px; font-weight: 550; }
+.garden-bed-status small { display: block; margin-top: 5px; color: #a0a38f; font-size: 10px; line-height: 1.6; }
+.garden-bed-status.is-wet { background: #eaf2e9; }
+.garden-bed-status.is-wet strong { color: #6d8874; }
+.garden-flower-choices { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.garden-flower-choice { display: flex; align-items: center; gap: 9px; min-width: 0; min-height: 69px; padding: 11px 10px; border: 1px solid #e6e6d9; border-radius: 13px; background: #fffdf6; color: #7d8a6d; text-align: left; cursor: pointer; }
+.garden-flower-choice.is-selected { border-color: #98ae81; background: #f0f4e7; box-shadow: inset 0 0 0 1px #98ae8133; }
+.garden-flower-symbol { display: grid; place-items: center; flex: 0 0 35px; height: 40px; border-radius: 10px; background: #f3eedb; font-size: 29px; }
+.garden-flower-choice[data-flower-id="tulip"] .garden-flower-symbol { background: #f7e9e4; }
+.garden-flower-choice[data-flower-id="lavender"] .garden-flower-symbol { background: #eee9f3; }
+.garden-flower-choice[data-flower-id="sunflower"] .garden-flower-symbol { background: #f7edce; }
+.garden-flower-choice strong { display: block; color: #758263; font-size: 11px; font-weight: 550; }
+.garden-flower-choice small { display: block; margin-top: 4px; color: #a2a48c; font-family: Georgia, serif; font-size: 10px; }
+.garden-choice-check { margin-left: auto; color: #8ca275; font-size: 12px; }
+.garden-flower-description { min-height: 34px; margin: 12px 0 14px; color: #949b83; font-size: 10px; line-height: 1.8; }
+.garden-care-actions { display: flex; flex-wrap: wrap; gap: 9px; }
+.garden-care-actions .button { flex: 1; min-height: 40px; padding: 10px 12px; font-size: 11px; white-space: nowrap; }
+.garden-water-button { color: #6a8d83; }
+.garden-water-button > span { margin-right: 4px; }
+.garden-action-hint { margin: 11px 0 0; color: #a2a48d; font-size: 10px; line-height: 1.7; }
+.garden-note { margin-top: 22px; }
+.garden-panel button:focus-visible { outline: 3px solid #8da574; outline-offset: 3px; }
+.garden-panel button:disabled { cursor: default; }
+.garden-bed:disabled, .garden-flower-choice:disabled { opacity: .65; }
+.park-dock { flex-wrap: wrap; justify-content: center; }
+.park-garden-label, .park-garden-entry { position: absolute; top: 0; left: 0; z-index: 1; min-height: 34px; max-width: 180px; padding: 6px 11px; border: 1px solid #ccd9b9; border-radius: 20px; background: #f8fbeded; color: #71875d; font-size: 10px; line-height: 1.5; box-shadow: 0 3px 10px #627c4d16; cursor: pointer; white-space: nowrap; }
+.park-garden-entry { border-color: #d9ddc6; background: #fffcf0ed; color: #879368; }
+.park-garden-label[hidden], .park-garden-entry[hidden] { display: none; }
+@media (max-width: 1050px) {
+  .garden-layout { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .garden-map-section { width: 100%; max-width: 480px; margin-inline: auto; }
+  .garden-intro { flex-wrap: wrap; }
+  .garden-intro > div { flex: 1; }
+  .garden-free { margin-left: 69px; }
+  .park-mode .park-scene-bottom { bottom: 142px; }
+}
+@media (max-width: 600px) {
+  .park-mode .park-dock { width: calc(100% - 24px); }
+  .park-dock .park-dock-button { position: relative; display: grid; flex: 0 0 calc(25% - 3px); justify-items: center; align-content: center; min-width: 0; min-height: 49px; padding: 4px; gap: 2px; font-size: 11px; }
+  .park-dock .park-dock-button > span { font-size: 20px; line-height: 1.1; }
+  .park-dock .park-dock-button small { position: absolute; top: 2px; right: 5px; min-width: 15px; height: 15px; font-size: 9px; }
+  .garden-intro { display: grid; grid-template-columns: 43px minmax(0, 1fr); padding: 16px; gap: 12px; }
+  .garden-intro > span:first-child { flex-basis: 43px; height: 43px; font-size: 31px; }
+  .garden-intro strong { font-size: 12px; }
+  .garden-intro p { font-size: 10px; }
+  .garden-free { grid-column: 2; justify-self: start; margin-left: 0; }
+  .garden-care { padding: 17px; }
+  .garden-care-heading h3 { font-size: 16px; }
+  .garden-care-heading { align-items: flex-start; gap: 7px; }
+  .garden-care-heading .text-button { padding: 0; font-size: 9px; }
+  .garden-bed-map { height: 405px; }
+  .garden-bed { height: 108px; }
+  .garden-flower-choice { padding: 10px 7px; gap: 7px; }
+  .garden-flower-symbol { flex-basis: 30px; font-size: 25px; }
+  .garden-choice-check { font-size: 10px; }
+  .garden-care-actions .button { min-height: 44px; }
+}

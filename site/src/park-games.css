@@ -1,0 +1,110 @@
+.park-mode .park-dock { gap: 3px; }
+.park-dock-button { min-width: 88px; padding: 6px 13px; }
+.park-toy-icon { display: grid; place-items: center; width: 100%; aspect-ratio: 3 / 2; font-size: 54px; background: radial-gradient(ellipse, #e8edda, #f6f3e8); border-radius: 12px; }
+.park-npc-labels { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+.park-npc-label { position: absolute; left: 0; top: 0; z-index: 1; pointer-events: auto; border: 1px solid #fffdf4; border-radius: 18px; background: #fffdf4ed; color: #54674d; box-shadow: 0 3px 12px #40582b24; padding: 6px 10px; white-space: nowrap; font-family: inherit; font-size: 11px; cursor: pointer; }
+.park-npc-label strong, .park-npc-label small { display: block; }
+.park-npc-label small { color: #8a947e; font-size: 9px; margin-top: 2px; }
+.park-npc-label:hover { background: #edf5d9; }
+.park-game-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.park-game-card { padding: 24px; border: 1px solid #dfe6d5; border-radius: 20px; background: #f1f5e6; }
+.game-card-memory { background: #f8eee0; border-color: #ecddc6; }
+.game-card-word-spell { background: #edf0f6; border-color: #dde2ec; }
+.park-game-symbol { display: block; margin-bottom: 14px; font-size: 42px; }
+.park-game-card h3 { margin: 7px 0; font-size: 20px; }
+.park-game-card p { min-height: 48px; line-height: 1.7; font-size: 13px; color: #75816c; }
+.park-game-card small { color: #7d866f; font-size: 11px; }
+.park-game-card-bottom { display: flex; justify-content: space-between; gap: 10px; align-items: center; margin: 20px 0 14px; font-size: 13px; font-weight: 600; }
+.park-resume { display: flex; gap: 14px; align-items: center; justify-content: space-between; padding: 14px 18px; margin-bottom: 20px; border: 1px dashed #b8c5a8; background: #eaf0de; border-radius: 14px; font-size: 13px; }
+.park-history-title { margin: 26px 0 12px; font-size: 15px; }
+.park-score-list { display: grid; gap: 8px; }
+.park-score-list > div { display: flex; justify-content: space-between; gap: 12px; border-bottom: 1px solid #e3e6d9; padding: 10px 0; font-size: 12px; }
+.park-score-list span { color: #7b866e; }
+.park-residents { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.park-resident { display: grid; justify-items: center; gap: 8px; padding: 20px; border: 1px solid #e0e5d7; border-radius: 16px; background: #fffdf5; color: #51664b; cursor: pointer; }
+.park-resident > span { font-size: 48px; }
+.park-resident small { color: #86927b; }
+.park-resident.is-selected { background: #eaf0df; border-color: #9eb389; }
+.park-npc-dialog { display: flex; gap: 22px; margin-top: 20px; padding: 24px; border-radius: 18px; background: #fffdf5; border: 1px solid #e4e6d9; }
+.park-npc-avatar { font-size: 54px; }
+.park-npc-dialog h3 { margin: 0; font-size: 17px; }
+.park-npc-dialog p { font-size: 14px; line-height: 1.9; color: #727f68; max-width: 680px; }
+.park-game-dialog { width: min(620px, calc(100vw - 28px)); max-height: calc(100svh - 32px); padding: 26px; border: 1px solid #e7e4d7; border-radius: 26px; background: #fffdf7; color: #40543b; box-shadow: 0 24px 100px #263b3655; overflow-y: auto; }
+.park-game-dialog::backdrop { background: #1e342959; backdrop-filter: blur(5px); }
+.park-game-heading { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.park-game-heading h2 { margin: 6px 0 12px; font-family: 'Songti SC', Georgia, serif; font-size: 28px; }
+.park-game-meta { display: flex; justify-content: space-between; gap: 12px; padding: 12px 0; border-bottom: 1px solid #e7e8dc; color: #869174; font-size: 12px; }
+.park-game-meta b { color: #8d7341; font-size: 17px; }
+.park-game-content { margin-top: 18px; }
+.park-game-intro { text-align: center; padding: 14px 12px 24px; }
+.park-game-intro-icon { display: grid; place-items: center; width: 104px; height: 104px; border-radius: 50%; background: #edf2df; font-size: 58px; margin: 8px auto 20px; }
+.park-game-intro > p { line-height: 1.8; }
+.park-game-rules { text-align: left; padding: 18px; border-radius: 14px; background: #f2f4e9; color: #6b7b5f; font-size: 14px; }
+.park-game-note { font-size: 12px; color: #929a82; }
+.park-start-game { min-width: 210px; margin-top: 12px; }
+.park-game-footer { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; padding-top: 20px; font-size: 11px; color: #929a83; }
+.park-game-footer .text-button { font-size: 11px; }
+.park-game-error { padding: 12px; border-radius: 10px; background: #fae9df; color: #9b5b3e; font-size: 13px; }
+.park-round-score { display: flex; justify-content: space-between; align-items: center; margin: 0 0 15px; color: #879775; font-size: 13px; }
+.park-round-score strong { font-size: 24px; color: #56704e; }
+.park-leaf-field { position: relative; overflow: hidden; height: min(330px, 41svh); min-height: 210px; border-radius: 20px; background: linear-gradient(#dce9db 0%, #eaf0d6 80%, #a8bb81 81%, #91ac6a); outline-offset: 3px; }
+.park-leaf-cloud { position: absolute; top: 20px; width: 100px; height: 26px; border-radius: 60%; background: #fffff773; }
+.cloud-one { left: 22px; }.cloud-two { right: 36px; top: 50px; width: 130px; }
+.park-leaf-trees { position: absolute; bottom: 14%; left: 2%; width: 96%; text-align: center; font-size: 150px; letter-spacing: 10px; line-height: 1; color: #a7bb8d4d; }
+.park-leaf-lanes { position: absolute; inset: 20px 0 35px; display: grid; grid-template-columns: repeat(3,1fr); }
+.park-leaf-lanes i + i { border-left: 1px dashed #91ad7736; }
+.park-falling-object { position: absolute; top: 8%; font-size: 34px; transform: translateX(-50%); }
+.park-basket { position: absolute; bottom: 7%; font-size: 47px; transform: translateX(-50%); transition: left 90ms ease-out; }
+.lane-0 { left: 16.666%; }.lane-1 { left: 50%; }.lane-2 { left: 83.333%; }
+.park-leaf-paused { position: absolute; inset: 0; display: flex; flex-direction: column; gap: 18px; justify-content: center; align-items: center; background: #edf1deaa; backdrop-filter: blur(3px); }
+.park-lane-buttons { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 12px; }
+.park-lane-buttons button { min-height: 44px; border: 1px solid #d5dfc7; border-radius: 12px; background: #f0f4e7; color: #708362; cursor: pointer; }
+.park-lane-buttons button[aria-pressed="true"] { background: #6b8659; color: white; border-color: #6b8659; }
+.park-round-help { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 12px; font-size: 11px; color: #8b987a; }
+.park-round-help .text-button { font-size: 12px; }
+.park-memory-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 10px; }
+.park-memory-card { display: grid; place-content: center; gap: 3px; min-width: 0; height: clamp(62px, 13vw, 98px); padding: 7px; border: 2px solid #dedcc8; border-radius: 14px; background: repeating-linear-gradient(45deg,#eceddc,#eceddc 6px,#e8ebd7 6px,#e8ebd7 12px); color: #8a9c76; cursor: pointer; }
+.park-memory-card > span { font-size: 35px; }
+.park-memory-card small { font-size: 10px; }
+.park-memory-card.is-flipped { border-color: #e7c78b; background: #fff4d9; }
+.park-memory-card.is-matched { border-color: #b0c69b; background: #e5eed9; opacity: .72; }
+.park-memory-card:disabled { cursor: default; }
+.park-memory-message { display: flex; justify-content: space-between; align-items: center; min-height: 54px; gap: 12px; margin-top: 16px; font-size: 12px; color: #839071; }
+.park-memory-message button { flex-shrink: 0; }
+.park-spelling { text-align: center; padding: 18px 12px; }
+.park-spelling h3 { font-size: 28px; margin: 6px 0 14px; }
+.park-spelling p { color: #94a085; font-size: 16px; letter-spacing: .15em; }
+.park-spelling form { display: grid; gap: 12px; max-width: 360px; margin: 22px auto 16px; }
+.park-spelling label { text-align: left; font-size: 12px; color: #7a8c69; }
+.park-spelling input { width: 100%; min-height: 48px; border: 1px solid #dbe1d2; border-radius: 12px; padding: 12px 14px; background: white; color: #425c3b; font-size: 20px; }
+.park-spelling small, .park-spell-feedback { color: #889b77; font-size: 12px; }
+.park-spell-feedback { padding: 10px 14px; border-radius: 10px; background: #edf2e3; }
+.park-game-result { padding: 16px 0 24px; text-align: center; }
+.park-game-result-icon { font-size: 70px; margin: 8px 0 18px; }
+.park-game-result h3 { margin: 16px 0; font-size: 58px; font-variant-numeric: tabular-nums; }
+.park-game-result h3 small { font-size: 19px; font-weight: 400; color: #99a78b; }
+.park-game-result p { font-size: 13px; color: #8b997d; }
+.park-result-actions { display: flex; gap: 12px; justify-content: center; margin-top: 24px; }
+.park-end-confirm { margin-top: 16px; padding: 16px; border-radius: 14px; border: 1px solid #e5d8bd; background: #fff6e6; font-size: 13px; }
+.park-end-confirm .button { margin: 4px 8px 0 0; }
+@media (max-width: 960px) {
+  .park-game-cards { grid-template-columns: 1fr; }
+  .park-game-card { padding: 20px; }
+  .park-game-card p { min-height: 0; }
+}
+@media (max-width: 600px) {
+  .park-dock-button { flex-direction: column; min-width: 0; flex: 1; gap: 3px; padding: 5px 9px; font-size: 11px; position: relative; white-space: nowrap; }
+  .park-dock-button > span { font-size: 20px; }
+  .park-dock-button small { position: absolute; top: 0; right: 3px; font-size: 8px; }
+  .park-npc-label { font-size: 9px; padding: 5px 7px; }
+  .park-resident { padding: 16px 8px; }.park-resident > span { font-size: 34px; }
+  .park-resident small { font-size: 10px; }.park-residents { gap: 8px; }
+  .park-npc-dialog { padding: 18px; gap: 12px; }.park-npc-avatar { font-size: 32px; }
+  .park-resume { align-items: flex-start; flex-direction: column; }
+  .park-game-dialog { padding: 18px; border-radius: 20px; max-height: calc(100svh - 20px); }
+  .park-game-heading h2 { font-size: 24px; }.park-game-meta { font-size: 11px; }
+  .park-memory-grid { gap: 7px; }.park-memory-card > span { font-size: 28px; }
+  .park-game-intro { padding-left: 0; padding-right: 0; }.park-game-rules { padding: 14px; }
+  .park-memory-message { align-items: flex-start; flex-direction: column; }
+}
+@media (prefers-reduced-motion: reduce) { .park-basket { transition: none; } }

@@ -1,0 +1,3 @@
+[data-wardrobe-item="trail-runner"], [data-wardrobe-item="trail-visor"] { --wearable-color: #e47758; }
+[data-wardrobe-item="trail-runner"] .swatch-outfit span { background: linear-gradient(90deg, #315d51 0 25%, #e47758 25% 75%, #315d51 75%); font-size: 14px; font-weight: 800; padding-top: 9px; }
+[data-wardrobe-item="trail-visor"] .swatch-headwear span { color: #315d51; border-bottom: 5px solid #e47758; border-radius: 50%; padding: 0 5px; }

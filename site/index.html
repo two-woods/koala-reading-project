@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f6f3eb">
+    <meta name="koala-hosting" content="github-pages">
+    <title>考拉书房</title>
+    <link rel="stylesheet" href="./src/styles.css">
+    <link rel="stylesheet" href="./src/park.css">
+    <link rel="stylesheet" href="./src/park-games.css">
+    <link rel="stylesheet" href="./src/park-adventure.css">
+    <link rel="stylesheet" href="./src/park-garden.css">
+    <link rel="stylesheet" href="./src/koala-runner.css">
+    <script type="module" src="./src/main.mjs"></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="#library" aria-label="考拉书房首页">
+          <span class="brand-mark" aria-hidden="true">K</span>
+          <span><strong>考拉书房</strong><small>读一点，记一点</small></span>
+        </a>
+        <nav class="primary-nav" aria-label="主导航">
+          <button class="nav-item active" data-route="library"><span>▦</span>书架</button>
+          <button class="nav-item" data-route="vocabulary"><span>▤</span>词汇本</button>
+          <button class="nav-item" data-route="review"><span>◷</span>复习</button>
+          <button class="nav-item" data-route="notes"><span>✎</span>标记与笔记</button>
+          <button class="nav-item" data-route="resources"><span>↗</span>外刊发现</button>
+          <button class="nav-item" data-route="playground"><span>🐨</span>考拉乐园</button>
+        </nav>
+        <div class="sidebar-bottom">
+          <div class="storage-note"><span class="status-dot"></span><span id="storageText">仅保存在这台设备</span></div>
+          <button class="text-button" data-action="export">导出与备份</button>
+          <button class="text-button" data-action="restore">从备份恢复</button>
+          <button class="text-button muted" data-action="about">支持格式与限制</button>
+        </div>
+      </aside>
+      <main class="main-area">
+        <header class="topbar">
+          <div class="mobile-brand"><span class="brand-mark">K</span><strong>考拉书房</strong></div>
+          <div class="topbar-right">
+            <label class="search-box"><span aria-hidden="true">⌕</span><input id="globalSearch" type="search" placeholder="搜索书籍或单词" aria-label="搜索书籍或单词"></label>
+            <button class="button button-primary" data-action="import-book"><span aria-hidden="true">＋</span> 导入读物</button>
+          </div>
+        </header>
+        <section id="view" class="view" aria-live="polite"></section>
+        <input id="bookInput" type="file" accept=".epub,.txt,.md,.markdown,text/plain,text/markdown,application/epub+zip" hidden>
+        <input id="backupInput" type="file" accept=".json,application/json" hidden>
+        <input id="dictionaryInput" type="file" accept=".json,.tsv,.txt,application/json,text/tab-separated-values,text/plain" hidden>
+      </main>
+    </div>
+    <dialog id="lookupDialog" class="modal">
+      <form method="dialog" class="modal-close-form"><button class="icon-button" aria-label="关闭">×</button></form>
+      <p class="eyebrow">本地英汉查词</p>
+      <h2 id="lookupTerm" class="lookup-term"></h2>
+      <p id="lookupContext" class="lookup-context"></p>
+      <div id="dictionaryResult" class="dictionary-result" aria-live="polite"></div>
+      <label id="manualDefinitionLabel" class="field-label" for="manualDefinition" hidden>手工填写释义</label>
+      <textarea id="manualDefinition" rows="5" placeholder="请填写这个词在原句中的意思" hidden></textarea>
+      <div class="modal-actions">
+        <button id="saveWord" class="button button-primary" type="button">加入词汇本</button>
+        <button class="button button-quiet" type="button" data-dialog-close="lookupDialog">取消</button>
+      </div>
+    </dialog>
+    <dialog id="annotationDialog" class="modal">
+      <form method="dialog" class="modal-close-form"><button class="icon-button" aria-label="关闭">×</button></form>
+      <p class="eyebrow">原文摘录</p>
+      <h2>添加标记或笔记</h2>
+      <blockquote id="annotationQuote" class="annotation-quote"></blockquote>
+      <label class="field-label" for="annotationNote">笔记（可选）</label>
+      <textarea id="annotationNote" rows="3" placeholder="写下你的理解或联想"></textarea>
+      <div class="modal-actions">
+        <button id="saveAnnotation" class="button button-primary" type="button">保存标记</button>
+        <button class="button button-quiet" type="button" data-dialog-close="annotationDialog">取消</button>
+      </div>
+    </dialog>
+    <dialog id="infoDialog" class="modal modal-wide">
+      <form method="dialog" class="modal-close-form"><button class="icon-button" aria-label="关闭">×</button></form>
+      <div id="infoContent"></div>
+    </dialog>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>

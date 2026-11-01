@@ -1,0 +1,72 @@
+.adventure-role { margin: 9px 0 4px; color: #758469; font-size: 11px; letter-spacing: .05em; }
+.adventure-role span { color: #b49b62; padding-right: 6px; }
+.adventure-panel { background: #f7f6ed; }
+.adventure-intro { display: flex; align-items: center; gap: 17px; margin-bottom: 26px; padding: 20px 22px; border: 1px solid #e3dfcc; border-radius: 18px; background: #fffcf2; }
+.adventure-seal { display: grid; place-items: center; flex: 0 0 62px; height: 62px; border: 3px double #cbb87f; border-radius: 50%; color: #a18949; background: #f6edcf; font-size: 35px; }
+.adventure-intro strong { color: #3d523a; font-size: 18px; }
+.adventure-intro p { margin: 7px 0; color: #718166; font-size: 12px; }
+.adventure-intro small { display: block; max-width: 590px; color: #8b927f; font-size: 11px; line-height: 1.8; }
+.adventure-intro-actions { display: flex; flex-shrink: 0; flex-direction: column; gap: 8px; margin-left: auto; }
+.adventure-intro-actions .button { min-height: 35px; padding: 8px 14px; font-size: 11px; }
+.adventure-layout { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(260px, 1fr); gap: 24px; align-items: start; }
+.adventure-chapter + .adventure-chapter { margin-top: 27px; }
+.adventure-chapter-heading { display: flex; align-items: center; justify-content: space-between; gap: 15px; margin-bottom: 10px; }
+.adventure-chapter-heading h3 { margin: 0 0 6px; color: #405b3c; font-size: 16px; }
+.adventure-chapter-heading p { margin: 0; color: #929783; font-size: 10px; }
+.adventure-chapter-heading > span { color: #7e8d6f; font-size: 13px; font-variant-numeric: tabular-nums; }
+.adventure-chapter progress { display: block; width: 100%; height: 5px; overflow: hidden; margin-bottom: 12px; border: 0; border-radius: 5px; background: #e6e7da; accent-color: #8ba376; }
+.adventure-chapter progress::-webkit-progress-bar { border-radius: 5px; background: #e6e7da; }
+.adventure-chapter progress::-webkit-progress-value { border-radius: 5px; background: #8ba376; }
+.adventure-clues { display: grid; gap: 8px; }
+.adventure-clue { display: flex; align-items: center; gap: 12px; min-height: 76px; width: 100%; padding: 14px; border: 1px solid #e3e4d6; border-radius: 13px; background: #fffdf6; color: #6f7e60; text-align: left; cursor: pointer; }
+.adventure-clue > span:first-child { display: grid; place-items: center; flex: 0 0 37px; height: 37px; border-radius: 12px; background: #f0f0e4; font-size: 25px; color: #a7b098; }
+.adventure-clue strong { display: block; color: #69795e; font-size: 12px; font-weight: 550; }
+.adventure-clue small { display: block; margin-top: 6px; color: #949b86; font-size: 10px; line-height: 1.6; }
+.adventure-clue b { margin-left: auto; font-size: 16px; font-weight: 400; }
+.adventure-clue.is-found { background: #f2f5e9; border-color: #d9e1ca; }
+.adventure-clue.is-found > span:first-child { background: #e4edda; }
+.adventure-clue.is-selected { border-color: #8da477; box-shadow: 0 0 0 1px #8da477; }
+.adventure-story { position: sticky; top: 20px; padding: 27px 25px; border: 1px solid #e2dcc7; border-radius: 17px; background: #fffcf0; box-shadow: 0 5px 0 #ede7d766; }
+.adventure-story-number { margin: 0; color: #aaa17e; font-size: 10px; letter-spacing: .12em; }
+.adventure-story-symbol { display: block; margin: 25px 0 18px; font-size: 37px; }
+.adventure-story h3 { margin: 0 0 20px; color: #435c3c; font-family: "Songti SC", Georgia, serif; font-size: 23px; line-height: 1.5; font-weight: 550; }
+.adventure-story-copy { color: #80866f; font-size: 12px; line-height: 2; }
+.adventure-story blockquote { margin: 23px 0; padding: 0 0 0 14px; border-left: 2px solid #bbcba7; }
+.adventure-story blockquote p { margin: 0 0 9px; color: #5d7351; font-family: Georgia, serif; font-size: 18px; line-height: 1.6; }
+.adventure-story blockquote span { color: #97957d; font-size: 11px; }
+.adventure-story .button { min-height: 38px; margin-top: 10px; font-size: 11px; }
+.adventure-titles { display: grid; grid-template-columns: 1fr 1fr 1.4fr; gap: 12px; margin-top: 30px; }
+.adventure-title { display: flex; align-items: center; gap: 12px; padding: 17px; border: 1px solid #e0e2d4; border-radius: 13px; background: #f0f1e7; color: #a1a58f; }
+.adventure-title > span { font-size: 26px; }
+.adventure-title strong { display: block; font-size: 12px; font-weight: 550; }
+.adventure-title small { display: block; margin-top: 5px; font-size: 10px; }
+.adventure-title.is-unlocked { border-color: #dccc9c; color: #9a7d3e; background: #f7efd7; }
+.park-secret-label { position: absolute; left: 0; top: 0; z-index: 1; min-height: 33px; padding: 5px 10px; border: 1px solid #e4d2a3; border-radius: 18px; background: #fff8dfef; color: #8b753c; font-size: 10px; white-space: nowrap; box-shadow: 0 3px 10px #71613919; cursor: pointer; }
+.park-secret-label[hidden] { display: none; }
+.park-secret-label.is-found { border-color: #cfddbc; color: #6c8458; background: #f3f7e9ee; }
+.park-trail-stop[hidden] { display: none; }
+.park-camera-tools .park-trail-run { color: #9b7043; border-color: #e1cfaa; background: #fbf1daed; }
+@media (max-width: 900px) {
+  .adventure-intro { flex-wrap: wrap; }
+  .adventure-intro-actions { flex-direction: row; width: 100%; margin-left: 79px; }
+  .adventure-layout { grid-template-columns: minmax(0, 1fr); }
+  .adventure-story { position: static; }
+  .adventure-titles { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 600px) {
+  .adventure-role { max-width: 190px; font-size: 9px; line-height: 1.6; letter-spacing: 0; }
+  .park-mode .park-header h1 { font-size: 23px; letter-spacing: .035em; }
+  .park-mode .park-header { align-items: flex-start; }
+  .park-mode .park-kicker { font-size: 8px; letter-spacing: .02em; }
+  .adventure-intro { gap: 12px; padding: 17px; }
+  .adventure-seal { flex-basis: 43px; height: 43px; font-size: 26px; }
+  .adventure-intro > div:nth-child(2) { flex: 1; }
+  .adventure-intro-actions { margin-left: 0; }
+  .adventure-intro small { font-size: 10px; }
+  .adventure-clue { padding: 12px; gap: 10px; }
+  .adventure-story { padding: 23px; }
+  .park-mode .park-scene-status { align-items: flex-start; }
+  .park-scene-status > span { line-height: 1.7; }
+  .park-camera-tools { max-width: calc(100% - 20px); }
+  .park-secret-label { min-height: 34px; font-size: 10px; }
+}
